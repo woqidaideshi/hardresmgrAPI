@@ -1,0 +1,17 @@
+{
+  "author": "CannedFish <lianggy0719@126.com>",
+  "name": "api",
+  "description": "an api package for webde app",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git@124.16.141.145:ibp/framework-api.git"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
