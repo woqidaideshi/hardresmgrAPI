@@ -8,7 +8,9 @@
     "url": "git@124.16.141.145:ibp/framework-api.git"
   },
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "systemconfig": "~0.1.0"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
