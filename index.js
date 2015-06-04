@@ -17,3 +17,8 @@ exports.resourceMgr = function() {
 exports.im = function(){
   return require('./lib/im');
 }
+
+exports.lang = function(){
+  return require('./lib/lang');
+}
+
