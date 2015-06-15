@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>示例应用</title>
+  
+    
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/require.js"></script>
+    <script type="text/javascript" src="lib/api.js"></script>
+    <script>
+      /**
+       * 应用入口函数，页面加载完毕后调用，参数params是应用调用参数，目前是字符串类型
+       */
+      function onStart(params){
+        console.log("onStart():" + params);
+        $('#params').text("程序参数是:" + params);
+        WDC.requireAPI(['app'], function(app){
+          app.getRegisteredApp(function(err, appArr) {
+            if(err) return $('#applist').text('Error: ' + err);
+            $('#applist').text("已安装的程序有：" + appArr.length + "个，包括：" + appArr);
+            var definedapp = new Array();
+            var tem = 0;
+            for(var i=0;i<appArr.length;i++)
+              {
+                app.getRegisteredAppInfo(function(err,ret){
+                  if(err){
+                    console.log("undefined app...");
+                    tem++;
+                  }else{
+                    definedapp.push(ret.id);
+                    url="http://" + location.host + "/callapp/" + ret.id + "/index.html";
+                    console.log(url);
+                    $('#applink').append('<li><a href='+url+' target="_blank">'+ ret.name +'</a></li>') ;
+                    tem++;
+                  }
+                if(tem == appArr.length){
+                  for (var i = 0; i < appArr.length; i++){
+                    var count = 0;
+                    for(var j = 0;j < definedapp.length; j++){
+                      if(appArr[i] == definedapp[j])
+                        {
+                          console.log(appArr[i] + " is valid.");
+                          break;
+                        }
+                      count++;
+                    }
+                    if(count >= definedapp.length)
+                      $('#applink').append('<li>' + appArr[i] + '</li>');
+                  }    
+                }
+                },appArr[i]);
+              }    
+          });
+        });
+      }
+    </script>
+
+  </head>
+  <body> 
+    <p>
+      这是一个示例应用程序
+    </p>
+    <div>
+      <p>
+        <div id="params">正在加载程序。。。</div>
+      </p>
+      <p>
+        <div id="applist"></div>
+      </p>
+      <p>
+        <ul id="applink">
+        </ul>
+      </p>
+    <div>
+  </body>
+</html>
