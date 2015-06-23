@@ -10,11 +10,12 @@
   "main": "index.js",
   "dependencies": {
     "systemconfig": "~0.1.0",
-    "utils": "~0.1.0"
+    "utils": "~0.1.0",
+    "dbus": ">= 0.2.10"
   },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">= 0.8.0"
   }
 }
