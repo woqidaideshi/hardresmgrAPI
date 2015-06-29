@@ -15,11 +15,11 @@ exports.resourceMgr = function() {
   return require('./lib/resourcemgr/resourceMgr');
 }
 
-exports.im = function(){
+exports.im = function() {
   return require('./lib/im/im');
 }
 
-exports.lang = function(){
+exports.lang = function() {
   return require('./lib/language/lang');
 }
 
@@ -31,3 +31,6 @@ exports.devDetect_remote = function() {
   return require('./lib/device_detect/device_service_remote');
 }
 
+exports.clipboard = function() {
+  return require('./lib/clipboard/clipboard');
+}
