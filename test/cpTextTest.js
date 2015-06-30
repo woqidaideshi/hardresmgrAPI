@@ -1,6 +1,5 @@
-var 
-  cp = require('../lib/clipboard/clipboard'),
-  dstPath = "/home/zk/test.doc";
+var // api =require('api'),
+  cp = require('../lib/clipboard/clipboard');
 
 
 cp.getText(function(ret){
@@ -10,6 +9,6 @@ cp.getText(function(ret){
 cp.setText("dddddddddddddd",function(err){
   console.log("in setText");
   if(err){
-    console.log("Error: " + err.err);
+    console.log("Error: " + err);
   }
 });
