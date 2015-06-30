@@ -7,8 +7,8 @@ exports.app_remote = function() {
 }
 
 exports.data = function() {
-  // return require('./lib/datamgr/data');
-  return require('../../app/demo-rio/nodewebkit/lib/api/data.js')
+  return require('./lib/datamgr/data');
+  //return require('../../app/demo-rio/nodewebkit/lib/api/data.js')
 }
 
 exports.resourceMgr = function() {
