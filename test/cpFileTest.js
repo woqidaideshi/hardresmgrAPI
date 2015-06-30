@@ -1,9 +1,9 @@
-var api = require('api'),
-  cp = api.clipboard(),
-  dstPath = "/home/zk/test.doc";
+var //api = require('api'),
+  cp = require("../lib/clipboard/clipboard"),
+  dstPath = "/home/zk/test.txt";
 
-  cp.setFile(dstPath, function(err){
-    if(!err){
+  cp.setFile("/home/zk/file.txt", function(err){
+    if( !err){
       cp.getFile(dstPath,function(){});
     }
   });
