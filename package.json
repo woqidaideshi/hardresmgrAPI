@@ -11,7 +11,8 @@
   "dependencies": {
     "systemconfig": "~0.1.0",
     "utils": "~0.1.0",
-    "dbus": ">= 0.2.10"
+    "dbus": ">= 0.2.10",
+     "api": "~0.1.0"
   },
   "devDependencies": {},
   "optionalDependencies": {},
