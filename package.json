@@ -12,7 +12,9 @@
     "systemconfig": "~0.1.0",
     "utils": "~0.1.0",
     "dbus": ">= 0.2.10",
-     "api": "~0.1.0"
+    "api": "~0.1.0",
+    "id3v2-parser": "0.3.0",
+	 "fs-extra" : "0.12.0"
   },
   "devDependencies": {},
   "optionalDependencies": {},
