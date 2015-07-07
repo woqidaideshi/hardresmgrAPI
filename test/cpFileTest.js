@@ -5,6 +5,9 @@ var //api = require('api'),
   cp.setFile("/home/lgy/t.iso", function(err) {
     if(!err) {
       cp.getFile(dstPath, function(session, dstPath) {
+        if(session.err) {
+          return console.log(session.err);
+        }
         var id = session.id;
         session.session.on('progress#' + id, function(percentage, msg) {
           console.log('Progress:', percentage + '%', msg);
