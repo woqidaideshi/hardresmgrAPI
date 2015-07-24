@@ -1,64 +1,64 @@
 var crypt = require('../lib/crypt/crypt.js');
 
-crypt.cipher('key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("Encrypted msg:  "+msg);
-  crypt.decipher('key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("Decrypted msg:  "+de);
-  });
-})
+  },'key123456',msg);
+},'key123456','Hi there ~~~!')
 
-crypt.cipher('blowfish','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("blowfish Encrypted msg:  "+msg);
-  crypt.decipher('blowfish','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("blowfish Decrypted msg:  "+de);
-  });
-})
+  },'blowfish','key123456',msg);
+},'blowfish','key123456','Hi there ~~~!')
 
-crypt.cipher('aes-256-cbc','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("aes-256-cbc Encrypted msg:  "+msg);
-  crypt.decipher('aes-256-cbc','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("aes-256-cbc Decrypted msg:  "+de);
-  });
-})
+  },'aes-256-cbc','key123456',msg);
+},'aes-256-cbc','key123456','Hi there ~~~!')
 
-crypt.cipher('cast','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("cast Encrypted msg:  "+msg);
-  crypt.decipher('cast','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("cast Decrypted msg:  "+de);
-  });
-})
+  },'cast','key123456',msg);
+},'cast','key123456','Hi there ~~~!')
 
-crypt.cipher('des3','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("des3 Encrypted msg:  "+msg);
-  crypt.decipher('des3','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("des3 Decrypted msg:  "+de);
-  });
-})
+  },'des3','key123456',msg);
+},'des3','key123456','Hi there ~~~!')
 
-crypt.cipher('idea','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("idea Encrypted msg:  "+msg);
-  crypt.decipher('idea','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("idea Decrypted msg:  "+de);
-  });
-})
+  },'idea','key123456',msg);
+},'idea','key123456','Hi there ~~~!')
 
-crypt.cipher('rc2','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("rc2 Encrypted msg:  "+msg);
-  crypt.decipher('rc2','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("rc2 Decrypted msg:  "+de);
-  });
-})
+  },'rc2','key123456',msg);
+},'rc2','key123456','Hi there ~~~!')
 
-crypt.cipher('rc4','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("rc4 Encrypted msg:  "+msg);
-  crypt.decipher('rc4','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("rc4 Decrypted msg:  "+de);
-  });
-})
+  },'rc4','key123456',msg);
+},'rc4','key123456','Hi there ~~~!')
 
-crypt.cipher('seed','key123456','Hi there ~~~!',function(msg){
+crypt.cipher(function(msg){
   console.log("seed Encrypted msg:  "+msg);
-  crypt.decipher('seed','key123456',msg,function(de){
+  crypt.decipher(function(de){
     console.log("seed Decrypted msg:  "+de);
-  });
-})
+  },'seed','key123456',msg);
+},'seed','key123456','Hi there ~~~!')
