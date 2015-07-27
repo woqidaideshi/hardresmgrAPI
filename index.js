@@ -19,6 +19,10 @@ exports.im = function() {
   return require('./lib/im/im');
 }
 
+exports.im_remote = function() {
+  return require('./lib/im/im_remote');
+}
+
 exports.lang = function() {
   return require('./lib/language/lang');
 }
