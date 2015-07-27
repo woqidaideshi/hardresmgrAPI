@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>示例应用</title>
+  
+    
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/require.js"></script>
+    <script type="text/javascript" src="lib/api.js"></script>
+    <script type="text/javascript" src="crypttest.js"></script>
+    <script>
+      /**
+       * 应用入口函数，页面加载完毕后调用，参数params是应用调用参数，目前是字符串类型
+       */
+       
+      function onStart(params){
+        WDC.requireAPI(['crypt'], function(data){
+          for(var prop in data){
+            $('#applink').append('<br>');
+            $('#applink').append('<input type="button" style="width:160px;height:30px" value=' + prop+' onclick="'+prop+'()">');
+          }
+        });
+      }
+    </script>
+
+  </head>
+  <body> 
+    <p>
+      crypt的API对象接口函数如下：
+    </p>
+    <div>
+      <p>
+        <div id="applist"></div>
+      </p>
+      <p>
+        <ul id="applink">
+        </ul>
+      </p>
+    <div>
+      <div>
+        <p id="inputDiv">
+        </p>
+      </div>
+  </body>
+</html>

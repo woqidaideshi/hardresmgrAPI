@@ -38,3 +38,7 @@ exports.devDetect_remote = function() {
 exports.clipboard = function() {
   return require('./lib/clipboard/clipboard');
 }
+
+exports.crypt = function(){
+  return require('./lib/crypt/crypt');
+}
