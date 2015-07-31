@@ -30,3 +30,12 @@ function decipher(){
      },'key123456',cryptedmsg);
    });
 }
+
+function getsymkey(){
+  var p=document.getElementById("inputDiv");
+  WDC.requireAPI(['crypt'], function(data){
+     data.getsymkey(function(msg){
+        p.innerHTML="get key : "+msg;
+     },"192.168.131.123");
+   });
+}
