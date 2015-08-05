@@ -39,6 +39,10 @@ exports.clipboard = function() {
   return require('./lib/clipboard/clipboard');
 }
 
-exports.crypt = function(){
+exports.clipboard_remote = function() {
+  return require('./lib/clipboard/clipboard_remote');
+}
+
+exports.crypt = function() {
   return require('./lib/crypt/crypt');
 }
