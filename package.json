@@ -9,6 +9,7 @@
   },
   "main": "index.js",
   "dependencies": {
+    "ursa": "~0.8.5",
     "systemconfig": "~0.1.0",
     "utils": "~0.1.0",
     "dbus": ">= 0.2.10",
