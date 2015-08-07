@@ -29,6 +29,42 @@
     <p>
       crypt的API对象接口函数如下：
     </p>
+    <p>
+	接口说明：
+    </p>
+      <p>
+	cipher 和 decipher 接口分别用来在安全通信过程中的对称加密和对称解密。它接受三个函数，第一个是加密或解密结果的回调函数，第二个是默认的加密公钥（目前是key123456），第三个参数是待加密的数据（目前是一个字符串）。
+    </p>
+      <p>
+	getsymkey 是向加密服务请求公钥的接口函数，目前会请求到“examplekey1234”字符串，该函数需要运行r->service->cryptdaemon服务作为支撑。
+    </p>
+      <p>
+	EncryptRSA 和 DecryptRSA 接口分别用来在安全通信过程中的非对称加密和解密。它接受三个参数，第一个是加密或解密结果的回调函数，第二个是待加密或待解密的字符串，第三个参数是公钥或私钥的路径，当第三个参数为空时，函数默认调用预置的公钥或私钥。
+    </p>
+      <p>
+	测试说明：
+    </p>
+      <p>
+	1，确保启动httpserver，datamgr，cryptdaemon三个服务。
+    </p>
+      <p>
+	2，点击clipher按钮，查看下方显示的Hi there ~~~!字符串加密后的密文（密钥key123456）。
+    </p>
+      <p>
+	3，点击decipher按钮，查看将当前密文解密后的明文结果（解密密钥key123456）。
+    </p>
+      <p>
+	4，点击getsymkey按钮，查看从加密服务获取来的密钥，显示“examplekey1234”。
+    </p>
+      <p>
+	5，点击EncryptRSA按钮，查看RSA算法加密字符串 "This is the test for RSA encryption"后的加密结果。
+    </p>
+      <p>
+	6，点击DecryptRSA按钮，查看解密当前密文后的明文结果。
+    </p>
+      <p>
+	上述测试脚本位于当前页面目录下的crypttest.js文件，测试者可以根据需要调整测试参数等。
+    </p>
     <div>
       <p>
         <div id="applist"></div>
