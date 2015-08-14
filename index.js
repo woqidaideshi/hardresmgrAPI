@@ -42,3 +42,7 @@ exports.clipboard = function() {
 exports.crypt = function(){
   return require('./lib/crypt/crypt');
 }
+
+exports.processWatcher = function(){
+  return require('./lib/process/processwatcher.js');
+}
