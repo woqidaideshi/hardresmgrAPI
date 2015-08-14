@@ -39,10 +39,16 @@ exports.clipboard = function() {
   return require('./lib/clipboard/clipboard');
 }
 
-exports.crypt = function(){
-  return require('./lib/crypt/crypt');
+exports.clipboard_remote = function() {
+  return require('./lib/clipboard/clipboard_remote');
 }
+
 
 exports.processWatcher = function(){
   return require('./lib/process/processwatcher.js');
 }
+
+exports.crypt = function() {
+  return require('./lib/crypt/crypt');
+}
+
