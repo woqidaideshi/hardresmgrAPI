@@ -1,4 +1,4 @@
-var usage = require('../lib/process/processwatcher.js');
+var usage = require('../lib/taskmgr/processwatcher.js');
 /*
   测试说明：
   首先在终端中输入 top命令，查看占用CPU使用率最高的几个进程ID（也可以新建一个空while循环测试）
