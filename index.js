@@ -12,7 +12,8 @@ exports.data = function() {
 }
 
 exports.resourceMgr = function() {
-  return require('./lib/resourcemgr/resourceMgr');
+  //return require('./lib/resourcemgr/resourceMgr');
+  return require('./lib/resourcemgr/res');
 }
 
 exports.im = function() {
