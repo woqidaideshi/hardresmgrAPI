@@ -44,6 +44,15 @@ exports.clipboard_remote = function() {
   return require('./lib/clipboard/clipboard_remote');
 }
 
+
+exports.processWatcher = function(){
+  return require('./lib/taskmgr/processwatcher.js');
+}
+
 exports.crypt = function() {
   return require('./lib/crypt/crypt');
+}
+
+exports.osutils = function(){
+  return require('./lib/taskmgr/osutils.js');
 }
